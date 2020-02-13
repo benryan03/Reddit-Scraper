@@ -1,0 +1,6 @@
+v1.0
+First working version.
+Several bugs need to be fixed:
+	Test for all combinations of cases where Reddit links are direct/indirect images, and include/do not include extensions
+	Add user inputs to specify scraping parameters
+	Add additional details to names of downloaded images
