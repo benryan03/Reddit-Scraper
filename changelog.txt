@@ -1,6 +1,11 @@
-v1.0
+v1.0 (2/13/20)
 First working version.
 Several bugs need to be fixed:
 	Test for all combinations of cases where Reddit links are direct/indirect images, and include/do not include extensions
 	Add user inputs to specify scraping parameters
 	Add additional details to names of downloaded images
+	
+v1.1 (2/15/20)
+User can now specify subreddit to parse
+User can not specify the number of submissions to parse
+Program will now detect whether a submission is a direct image link, and if not, it will print an error and move to the next submission
