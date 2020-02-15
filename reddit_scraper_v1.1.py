@@ -23,5 +23,3 @@ for submission in subreddit.new(limit=image_number):
         print("\n")
     else:
         print("Submission is not a direct image link.")
-
-print("DEBUG: end")
