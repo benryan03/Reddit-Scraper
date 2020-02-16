@@ -17,3 +17,7 @@ Need to add submission timestamp to names of downloaded files to differentiate t
 
 v1.3 (2/16/20)
 Program will add a datetime stamp to the beginning of the file name of downloaded images
+
+v1.4 (2/16/20)
+Fixed a bug where program would crash if a Reddit submission title included a character that cannot be used in file names
+If such a character is detected, progran will now change it to that character's HTML number in the file name
