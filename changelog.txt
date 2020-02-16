@@ -10,7 +10,10 @@ User can now specify subreddit to parse
 User can not specify the number of submissions to parse
 Program will now detect whether a submission is a direct image link, and if not, it will print an error and move to the next submission
 
-v1.3 (2/15/20)
+v1.2 (2/15/20)
 Program will now detect whether an image already exists in the download directory, and if so, will skip it
 This introduces a bug: if an image has the same title as a previously downloaded image, it will be skipped
 Need to add submission timestamp to names of downloaded files to differentiate these cases
+
+v1.3 (2/16/20)
+Program will add a datetime stamp to the beginning of the file name of downloaded images
