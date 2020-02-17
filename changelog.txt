@@ -24,3 +24,8 @@ If such a character is detected, progran will now change it to that character's 
 
 v1.5 (2/17/20)
 Added user input to sort selected subreddit by new, hot, or top
+
+v1.6 (2/17/20)
+Moved datetime function to inline code to improve readability
+Added comments to improve readability
+Removed an old debug message
