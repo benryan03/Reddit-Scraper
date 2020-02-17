@@ -1,4 +1,4 @@
-#reddit_scraper_v1.4
+#reddit_scraper_v1.5
 print("Reddit scraper")
 
 import praw
@@ -17,15 +17,25 @@ def change_time_format(time): #this function changes datetime to display time wi
     date_and_time_string = "".join(date_time_list)
     print(date_and_time_string)
 
-reddit = praw.Reddit('main_account', user_agent='main_account user agent') #this logs into a reddit account specified in praw.ini
 
+#getting user inputs
 subreddit_input = input("Enter subreddit: /r/")
+x = input("Enter sort order (hot, new, top): ")
 image_number = int(input("Enter the number of submissions to parse (limit 1000): "))
 
+#initializing PRAW things
+reddit = praw.Reddit('main_account', user_agent='main_account user agent') #this logs into a reddit account specified in praw.ini
 subreddit = reddit.subreddit(subreddit_input)
 
-for submission in subreddit.new(limit=image_number):
+if x == "hot":
+    sort_order = subreddit.hot
+elif x == "new":
+    sort_order = subreddit.new
+elif x == "top":
+    sort_order = subreddit.top
 
+for submission in sort_order (limit=image_number):
+    
     change_time_format(submission.created)
     submission_title_string = str(submission.title)
     print(submission.title, submission.url)
