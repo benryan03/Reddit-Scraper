@@ -21,3 +21,6 @@ Program will add a datetime stamp to the beginning of the file name of downloade
 v1.4 (2/16/20)
 Fixed a bug where program would crash if a Reddit submission title included a character that cannot be used in file names
 If such a character is detected, progran will now change it to that character's HTML number in the file name
+
+v1.5 (2/17/20)
+Added user input to sort selected subreddit by new, hot, or top
