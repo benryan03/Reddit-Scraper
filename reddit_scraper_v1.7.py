@@ -1,4 +1,4 @@
-#reddit_scraper_v1.6
+#reddit_scraper_v1.7
 print("Reddit scraper")
 
 import praw
@@ -36,7 +36,7 @@ for submission in sort_order (limit=image_number):
     print(submission.title, submission.url)
     file_extension = submission.url[len(submission.url) -4:]
 
-    if file_extension == ".jpg" or file_extension == "png" or file_extension == ".bmp" or file_extension == "jpeg": #if url is a direct image link
+    if file_extension == ".jpg" or file_extension == ".png" or file_extension == ".bmp" or file_extension == "jpeg" or file_extension == ".gif" or file_extension == "gifv": #if url is a direct image link
 
         #if submission title includes character not usable in filename:
         if ("?" in str(submission_title_string) 
@@ -60,13 +60,27 @@ for submission in sort_order (limit=image_number):
             submission_title_string = submission_title_string.replace("|", "&#124")
             submission_title_string = submission_title_string.replace("*", "&#42")
 
+        if os.path.exists("downloads/" + date_and_time_string + " - " + submission_title_string + file_extension) == False:
 
-        if os.path.exists("downloads/" + date_and_time_string + " - " + submission_title_string + " .jpg") == False:
-            file_name = wget.download(submission.url,)
-            os.rename(file_name, "downloads/" + date_and_time_string + " - " + submission_title_string + " .jpg") 
+            if file_extension == ".jpg":
+                file_name = wget.download(submission.url,)
+                os.rename(file_name, "downloads/" + date_and_time_string + " - " + submission_title_string + " .jpg")
+            elif file_extension == ".png":
+                file_name = wget.download(submission.url,)
+                os.rename(file_name, "downloads/" + date_and_time_string + " - " + submission_title_string + " .png")
+            elif file_extension == ".bmp":
+                file_name = wget.download(submission.url,)
+                os.rename(file_name, "downloads/" + date_and_time_string + " - " + submission_title_string + " .bmp")
+            elif file_extension == "jpeg":
+                file_name = wget.download(submission.url,)
+                os.rename(file_name, "downloads/" + date_and_time_string + " - " + submission_title_string + " .jpeg")
+            elif file_extension == ".gif":
+                file_name = wget.download(submission.url,)
+                os.rename(file_name, "downloads/" + date_and_time_string + " - " + submission_title_string + " .gif")
             print("\n")
 
         else:
             print("File already downloaded.\n")
+
     else:
         print("Submission is not a direct image link.")
