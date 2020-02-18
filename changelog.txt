@@ -29,3 +29,6 @@ v1.6 (2/17/20)
 Moved datetime function to inline code to improve readability
 Added comments to improve readability
 Removed an old debug message
+
+v1.7 (2/18/20)
+Added support for .png, .bmp, and .gif files
