@@ -1,4 +1,4 @@
-#reddit_scraper_v1.7
+#reddit-scraper
 print("Reddit scraper")
 
 import praw
